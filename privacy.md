@@ -1,107 +1,53 @@
-# Privacy Policy for "Club Fee Tracker" App
+# Privacy Policy for “Trek Trkr” App
 
-**Effective Date:** December 08, 2025
+**Effective Date:** May 1st, 2025
 
-Gubbins App Development © is committed to protecting your privacy.  
-This Privacy Policy explains how we handle your information when you use our mobile application (“App”).  
-By using the App, you agree to the terms outlined here.
-
----
+Gubbins App Development (“we”, “our”, or “us”) is committed to protecting your privacy. This Privacy Policy explains how we handle your information when you use our mobile application (“App”). By using the App, you agree to the terms outlined here.  [oai_citation:1‡Trek Trkr](https://trektrkr.carrd.co/)
 
 ## 1. Information We Collect
 
-While the App does not collect any personally identifiable information directly, it uses **Google AdMob** to display advertisements. Google AdMob may automatically collect:
+We collect the following data when you use the App:  [oai_citation:2‡Trek Trkr](https://trektrkr.carrd.co/)
 
-- Device identifiers (e.g., IDFA)
-- IP address
-- General device information (model, OS version)
-- App interaction and engagement data
-- Diagnostic and performance data
-- Approximate location (derived from network data)
+- **Location Data:** Your device’s location is collected in the background to provide core app functionality, even when the app isn’t open.  [oai_citation:3‡Trek Trkr](https://trektrkr.carrd.co/)
+- **Battery Information:** We collect your device’s battery level and charging status to optimise performance.  [oai_citation:4‡Trek Trkr](https://trektrkr.carrd.co/)
+- **User Information:** Basic account details (such as email address and user ID) are collected via Firebase Authentication when you sign in.  [oai_citation:5‡Trek Trkr](https://trektrkr.carrd.co/)
 
-This data is collected solely by Google, not by Gubbins App Development.
+## 2. How We Use Your Information
 
-For more information on how Google uses this data:  
-https://policies.google.com/technologies/ads
+We use your data to:  [oai_citation:6‡Trek Trkr](https://trektrkr.carrd.co/)
 
----
+- Monitor and securely store your location and battery information.  [oai_citation:7‡Trek Trkr](https://trektrkr.carrd.co/)
+- Improve app performance and user experience.  [oai_citation:8‡Trek Trkr](https://trektrkr.carrd.co/)
+- Back up data to the cloud via Firebase.  [oai_citation:9‡Trek Trkr](https://trektrkr.carrd.co/)
+- Notify trusted contacts in special cases (e.g., SOS alerts).  [oai_citation:10‡Trek Trkr](https://trektrkr.carrd.co/)
+- Support internal analytics and service improvements.  [oai_citation:11‡Trek Trkr](https://trektrkr.carrd.co/)
 
-## 2. Personal Information
+We do not sell, rent, or share your personal data with third-party marketers.  [oai_citation:12‡Trek Trkr](https://trektrkr.carrd.co/)
 
-We do **not** collect, store, or process personally identifiable information such as:
+## 3. Data Storage and Security
 
-- Name  
-- Email address  
-- Phone number  
-- Account details  
+Your information is stored securely using Google Firebase, which follows industry standard security measures to protect data from unauthorized access or disclosure.  [oai_citation:13‡Trek Trkr](https://trektrkr.carrd.co/)
 
-The App includes no account system and requires no registration.
+## 4. User Controls
 
----
+You have control over your data:  [oai_citation:14‡Trek Trkr](https://trektrkr.carrd.co/)
 
-## 3. Usage Data
+- Manually delete all stored location, battery, and account data via the app at any time.  [oai_citation:15‡Trek Trkr](https://trektrkr.carrd.co/)
+- Disable location access in your device settings (note: this may limit functionality).  [oai_citation:16‡Trek Trkr](https://trektrkr.carrd.co/)
+- Contact us at **gubbins.app.dev@icloud.com** for additional help regarding your data.  [oai_citation:17‡Trek Trkr](https://trektrkr.carrd.co/)
 
-Aside from Google AdMob’s automatic data collection, the App does **not** collect:
+## 5. Third-Party Services
 
-- Analytics or behavioural data  
-- Browsing history  
-- Crash logs  
-- Device-level metrics  
+The App uses Firebase (Authentication, Firestore, Cloud Messaging). Firebase may collect basic anonymized analytics under its own policies.  [oai_citation:18‡Trek Trkr](https://trektrkr.carrd.co/)
 
----
+## 6. Changes to This Policy
 
-## 4. Third-Party Data Sharing
+We may update this Privacy Policy from time to time. Any significant changes will update the Effective Date above and may be communicated through the app.  [oai_citation:19‡Trek Trkr](https://trektrkr.carrd.co/)
 
-We do not collect or share any personal data.  
-Google may collect and process information independently for:
+## 7. Contact Us
 
-- Delivering ads  
-- Personalising ads (if permitted by the user/device)  
-- Fraud prevention  
-- Measuring ad effectiveness  
+For questions about this Privacy Policy, please contact:
 
-We do not have access to or control over this data.
-
----
-
-## 5. Advertising and User Choices
-
-Ads in the App are served by Google AdMob.
-
-Users can manage advertising preferences through:
-
-- **iOS:** `Settings > Privacy > Tracking`  
-- Google advertising settings (depending on region)
-
-If tracking is disabled, ads will still appear but may be non-personalised.
-
----
-
-## 6. Data Security
-
-We do not collect or store personal data.  
-Google AdMob processes its own collected data under its own security policies.  
-Users should take normal precautions to protect their devices.
-
----
-
-## 7. Children’s Privacy
-
-The App is not directed toward children under 13, and we do not knowingly collect data from children.  
-Google AdMob uses settings compatible with child-safe advertising policies when applicable.
-
----
-
-## 8. Changes to This Privacy Policy
-
-We may update this Privacy Policy due to changes in:
-
-- The App  
-- Third-party services  
-- Legal requirements  
-
-The “Effective Date” at the top of this document will be updated accordingly.
-
----
+**Email:** gubbins.app.dev@icloud.com
 
 © 2025 Gubbins App Development. All rights reserved.
