@@ -1,6 +1,6 @@
 # Privacy Policy for “Trek Trkr” App
 
-**Effective Date:** May 1st, 2025
+**Effective Date:** January 11, 2026
 
 Gubbins App Development (“we”, “our”, or “us”) is committed to protecting your privacy. This Privacy Policy explains how we handle your information when you use our mobile application (“App”). By using the App, you agree to the terms outlined here.  [oai_citation:1‡Trek Trkr](https://trektrkr.carrd.co/)
 
@@ -50,4 +50,4 @@ For questions about this Privacy Policy, please contact:
 
 **Email:** gubbins.app.dev@icloud.com
 
-© 2025 Gubbins App Development. All rights reserved.
+© 2026 Gubbins App Development. All rights reserved.
