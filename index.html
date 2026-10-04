@@ -1,144 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Trek-Trkr</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1022">
+  <meta name="description" content="Trek-Trkr is a lightweight, privacy-focused location tracking app for trips, treks, and outdoor adventures.">
+  <title>Trek-Trkr — Track the journey</title>
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fefefe;
-      color: #333;
-      text-align: center;
-      line-height: 1.6;
-    }
-    header {
-      padding: 70px 20px;
-      background: linear-gradient(135deg, #007BFF, #A2855E);
-      color: white;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.4em;
-      letter-spacing: 0.5px;
-    }
-    header p {
-      margin-top: 12px;
-      font-size: 1.1em;
-      opacity: 0.95;
-    }
-    .btn {
-      display: inline-block;
-      margin: 28px auto 0;
-      padding: 14px 26px;
-      font-size: 1em;
-      color: white;
-      background: #007AFF;
-      border-radius: 8px;
-      text-decoration: none;
-    }
-    section {
-      padding: 24px 20px;
-      max-width: 820px;
-      margin: auto;
-    }
-   section h2 {
-      margin-top: 0;
-      margin-bottom: 12px;
-    }
-  section p {
-      margin-top: 0;
-      margin-bottom: 16px;
-    }
-  section ul {
-      margin-top: 12px;
-      padding-left: 20px;
-      text-align: left;
-      display: inline-block;
-    }
-  li {
-      margin-bottom: 10px;
-    }
-  footer {
-      padding: 28px 20px;
-      font-size: 0.85em;
-      color: #777;
-    }
-  footer a {
-      color: #007AFF;
-      text-decoration: none;
-    }
+    :root{color-scheme:light;--ink:#171b2c;--muted:#687186;--navy:#0b1022;--line:#e7e9f1;--surface:#fff;--page:#f7f8fc;--blue:#70a9ff;--sand:#d2b88a;--green:#92d1b2;--shadow:0 18px 50px rgba(28,36,70,.08)}
+    *,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--page);color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}a{color:inherit}a:focus-visible{outline:3px solid #a9c9ff;outline-offset:4px;border-radius:5px}.shell{width:min(1120px,calc(100% - 48px));margin-inline:auto}
+    .hero{position:relative;isolation:isolate;overflow:hidden;color:#fff;background:radial-gradient(ellipse at 82% 14%,rgba(75,143,236,.29),transparent 36%),radial-gradient(ellipse at 12% 100%,rgba(180,149,103,.21),transparent 42%),linear-gradient(135deg,#0b1022 0%,#111d34 58%,#1e293c 100%)}.hero::after{content:"";position:absolute;z-index:-1;width:520px;height:520px;right:-250px;bottom:-390px;border:1px solid rgba(255,255,255,.12);border-radius:50%;box-shadow:0 0 0 48px rgba(255,255,255,.025),0 0 0 96px rgba(255,255,255,.02)}
+    .topbar{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px;border-bottom:1px solid rgba(255,255,255,.1)}.brand{display:inline-flex;align-items:center;gap:12px;color:white;text-decoration:none;font-weight:700;letter-spacing:-.02em}.brand img{width:38px;height:38px;object-fit:cover;border-radius:12px;background:rgba(255,255,255,.12)}.brand span{font-size:.92rem}.nav{display:flex;align-items:center;gap:27px}.nav a{color:#d9def0;font-size:.9rem;text-decoration:none}.nav a:hover{color:#fff}
+    .hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(260px,.9fr);align-items:center;gap:48px;padding-block:clamp(74px,9vw,116px)}.eyebrow{margin:0 0 17px;color:#a8cbff;font-size:.76rem;font-weight:750;letter-spacing:.17em;text-transform:uppercase}h1{margin:0;font-size:clamp(3.2rem,7vw,6rem);line-height:.98;letter-spacing:-.07em;font-weight:760}.title-accent{color:#a9cbff;background:linear-gradient(95deg,#8fc3ff,#dfc59b);background-clip:text;-webkit-text-fill-color:transparent}.hero-copy{max-width:585px;margin:24px 0 0;color:#c7ccdc;font-size:clamp(1.02rem,1.7vw,1.18rem)}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:31px}.button{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:49px;padding:0 19px;border:1px solid transparent;border-radius:13px;font-size:.92rem;font-weight:720;text-decoration:none;transition:transform .2s ease}.button:hover{transform:translateY(-2px)}.button-primary{color:#142033;background:linear-gradient(100deg,#a9d0ff,#e5cea5)}.button-secondary{color:#f2f3fb;border-color:rgba(255,255,255,.2);background:rgba(255,255,255,.045)}
+    .scene{position:relative;display:grid;place-items:center;min-height:365px}.scene-glow{position:absolute;width:min(370px,76vw);aspect-ratio:1;border-radius:50%;background:linear-gradient(140deg,rgba(74,146,241,.38),rgba(200,168,116,.31));filter:blur(60px)}.map{position:absolute;width:320px;height:260px;overflow:hidden;border:1px solid rgba(255,255,255,.28);border-radius:28px;background:linear-gradient(145deg,#829d90,#5f7f79 42%,#687b68 43%,#a38f69);box-shadow:0 32px 85px rgba(0,0,0,.38);transform:rotate(-8deg)}.map::before{content:"";position:absolute;inset:-30%;opacity:.64;background:repeating-linear-gradient(35deg,transparent 0 20px,rgba(234,226,192,.52) 21px 23px,transparent 24px 49px),repeating-linear-gradient(115deg,transparent 0 34px,rgba(25,68,75,.42) 35px 38px,transparent 39px 68px);transform:rotate(8deg)}.map::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 65% 25%,rgba(255,255,255,.24),transparent 30%),linear-gradient(135deg,transparent 60%,rgba(39,65,59,.3))}.trail{position:absolute;z-index:1;left:20%;top:69%;width:65%;height:48%;border:4px solid transparent;border-top-color:#f1d393;border-right-color:#f1d393;border-radius:50%;transform:rotate(-31deg);filter:drop-shadow(0 2px 3px rgba(0,0,0,.25))}.pin{position:absolute;z-index:2;top:28%;right:24%;display:grid;place-items:center;width:37px;height:37px;border:3px solid white;border-radius:50% 50% 50% 5px;color:white;background:#387fe0;box-shadow:0 5px 15px rgba(0,0,0,.3);transform:rotate(-45deg)}.pin span{transform:rotate(45deg);font-size:.88rem}.map-label{position:absolute;z-index:2;left:14px;bottom:13px;padding:5px 9px;border:1px solid rgba(255,255,255,.4);border-radius:8px;color:#fff;background:rgba(21,38,45,.52);font-size:.65rem;font-weight:700;letter-spacing:.06em}.app-badge{position:absolute;z-index:3;right:max(3%,calc((100% - 320px)/2 - 27px));bottom:18px;display:grid;place-items:center;width:70px;height:70px;overflow:hidden;border:3px solid rgba(255,255,255,.85);border-radius:21px;color:white;background:linear-gradient(140deg,#428ce7,#b39569);box-shadow:0 14px 34px rgba(0,0,0,.32);font-size:1.05rem;font-weight:800}.app-badge img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    main{padding-block:clamp(62px,8vw,98px)}.intro{display:grid;grid-template-columns:.72fr 1.28fr;gap:46px;align-items:start;padding-bottom:clamp(58px,8vw,92px)}.section-kicker{margin:0 0 11px;color:#527eae;font-size:.75rem;font-weight:750;letter-spacing:.16em;text-transform:uppercase}h2{margin:0;font-size:clamp(1.9rem,3.7vw,2.7rem);letter-spacing:-.05em;line-height:1.12}.intro p{margin:4px 0 0;color:var(--muted);font-size:1.04rem}.features-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:26px}.features-head>p{max-width:390px;margin:0;color:var(--muted)}.feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.feature-card{min-height:190px;padding:22px 20px;border:1px solid var(--line);border-radius:19px;background:var(--surface);box-shadow:0 4px 14px rgba(30,39,75,.025)}.feature-symbol{display:grid;place-items:center;width:43px;height:43px;margin-bottom:17px;border-radius:14px;color:#3f6c9d;background:linear-gradient(140deg,#e4f1ff,#f5eee2);font-size:1.2rem}.feature-card h3{margin:0 0 6px;font-size:1rem;letter-spacing:-.02em}.feature-card p{margin:0;color:var(--muted);font-size:.88rem}.audience{display:flex;justify-content:space-between;align-items:center;gap:35px;margin-top:clamp(62px,8vw,90px);padding:clamp(27px,5vw,45px);border:1px solid #e1e8ed;border-radius:23px;background:radial-gradient(ellipse at 100% 0%,rgba(172,201,226,.25),transparent 42%),linear-gradient(115deg,#fff 0%,#f4f8fb 100%)}.audience h2{max-width:390px;font-size:clamp(1.6rem,3vw,2.15rem)}.audience p{max-width:530px;margin:0;color:var(--muted)}.closing{margin-top:clamp(62px,8vw,94px);padding:clamp(36px,7vw,68px) 24px;border-radius:26px;text-align:center;color:#fff;background:radial-gradient(ellipse at 50% 0%,rgba(100,157,221,.25),transparent 56%),linear-gradient(135deg,#10182b,#1c3043)}.closing .section-kicker{color:#a8cbff}.closing h2{max-width:700px;margin-inline:auto}.closing>p:not(.section-kicker){margin:13px 0 0;color:#c7ccdc}.closing .actions{justify-content:center;margin-top:22px}.share{display:flex;justify-content:center;gap:10px;margin-top:23px}.share a{display:inline-flex;min-height:40px;align-items:center;padding:0 15px;border:1px solid rgba(255,255,255,.18);border-radius:11px;color:#eeeaf9;font-size:.88rem;font-weight:650;text-decoration:none}.share a:hover{background:rgba(255,255,255,.09)}footer{margin-top:70px;color:#d6daea;background:var(--navy)}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:100px}footer p{margin:0;font-size:.88rem}.footer-links{text-align:right}.footer-links a{color:#b9d3fa;font-weight:650;text-decoration:none}.footer-links a:hover{color:white;text-decoration:underline}
+    @media(max-width:800px){.hero-grid{grid-template-columns:1fr;gap:26px;padding-block:67px 45px}.scene{min-height:310px}.intro{grid-template-columns:1fr;gap:14px}.feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.audience{align-items:flex-start;flex-direction:column;gap:13px}}
+    @media(max-width:560px){.shell{width:min(100% - 36px,1120px)}.topbar{min-height:72px}.brand span{max-width:145px;font-size:.82rem}.brand img{width:34px;height:34px;border-radius:10px}.nav{gap:14px}.nav a{font-size:.82rem}.nav a:first-child{display:none}h1{font-size:clamp(3rem,14vw,4.3rem)}.scene{min-height:270px}.map{width:270px;height:220px}.app-badge{right:calc(50% - 150px);width:62px;height:62px;border-radius:18px}.features-head{align-items:flex-start;flex-direction:column;gap:10px}.feature-grid{gap:11px}.feature-card{min-height:185px;padding:18px 15px}.closing{padding-inline:19px}.footer-inner{align-items:flex-start;flex-direction:column;justify-content:center;padding-block:24px}.footer-links{text-align:left}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important}}
   </style>
 </head>
 <body>
-
-<header>
-  <h1>Trek-Trkr</h1>
-  <p>Smart location tracking for trips, treks, and peace of mind.</p>
-  <a class="btn" href="https://apps.apple.com/app/6736860620">
-    Download on the App Store
-  </a>
-</header>
-
-<section>
-  <h2>What is Trek-Trkr?</h2>
-  <p>
-    Trek-Trkr is a lightweight, privacy-focused tracking app designed for
-    outdoor trips, travel, and safety-conscious adventures.
-  </p>
-</section>
-
-<section>
-  <h2>Key Features</h2>
-  <ul>
-    <li>📍 Background location tracking optimised for battery life</li>
-    <li>🔋 Battery-aware updates to reduce unnecessary usage</li>
-    <li>🧭 Automatic trip logging with timestamps and movement data</li>
-    <li>🚨 SOS and safety-focused notification support</li>
-    <li>☁️ Secure cloud storage with automatic data cleanup</li>
-    <li>🔒 Privacy-first design — you stay in control of your data</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Perfect For</h2>
-  <p>
-    Hikers, travellers, solo adventurers, and anyone who wants a reliable,
-    low-overhead way to keep track of journeys.
-  </p>
-</section>
-
-<section>
-  <h2>Stay Connected</h2>
-  <p>Share Trek-Trkr with friends:</p>
-
-  <a
-    href="https://www.facebook.com/sharer/sharer.php?u=https://apps.apple.com/app/6736860620"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Facebook
-  </a>
-  &nbsp;•&nbsp;
-  <a
-    href="https://twitter.com/intent/tweet?text=Check%20out%20Trek-Trkr%20–%20smart%20trip%20tracking!&url=https://apps.apple.com/app/6736860620"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    X
-  </a>
-</section>
-
-<footer>
-  <p>© 2026 Gubbins App Development. All rights reserved.</p>
-  <p class="footer-links">
-    <a href="mailto:gubbins.app.dev@icloud.com">Contact the developer</a>
-      &nbsp;•&nbsp;
-    <a href="https://gubbins-app-dev.github.io/trek-trkr/privacy">Privacy policy</a>
-  </p>
-</footer>
-
+  <header class="hero" id="top"><div class="shell">
+    <nav class="topbar" aria-label="Main navigation"><a class="brand" href="../index.html" aria-label="Gubbins App Development home"><img src="gubbins-logo.png" alt="" width="1024" height="1024" onerror="this.hidden=true"><span>Gubbins App Development</span></a><div class="nav"><a href="#features">Features</a><a href="#about">About</a><a href="https://gubbins-app-dev.github.io/trek-trkr/privacy">Privacy</a></div></nav>
+    <div class="hero-grid"><div><p class="eyebrow">For the journey ahead</p><h1>Trek-<br><span class="title-accent">Trkr.</span></h1><p class="hero-copy">Smart location tracking for trips, treks, and peace of mind. A lightweight, privacy-focused companion for outdoor trips, travel, and safety-conscious adventures.</p><div class="actions"><a class="button button-primary" href="https://apps.apple.com/app/6736860620">Download on the App Store <span aria-hidden="true">↗</span></a><a class="button button-secondary" href="#features">Explore features</a></div></div>
+      <div class="scene" role="img" aria-label="Illustration of a trail route and location pin on a map"><div class="scene-glow" aria-hidden="true"></div><div class="map" aria-hidden="true"><div class="trail"></div><div class="pin"><span>•</span></div><div class="map-label">TRAIL · 08:42</div></div><div class="app-badge" aria-label="Trek-Trkr app icon"><span aria-hidden="true">TT</span><img src="trek-trkr-icon.png" alt="" onerror="this.hidden=true"></div></div>
+    </div>
+  </div></header>
+  <main class="shell">
+    <section class="intro" id="about" aria-labelledby="about-heading"><div><p class="section-kicker">Meet Trek-Trkr</p><h2>Keep your journey in view.</h2></div><p>Trek-Trkr is a lightweight, privacy-focused tracking app designed for outdoor trips, travel, and safety-conscious adventures. It helps keep a record of where your journey takes you, with thoughtful controls for battery use and your data.</p></section>
+    <section id="features" aria-labelledby="features-heading"><div class="features-head"><div><p class="section-kicker">Thoughtful trip tracking</p><h2>Ready for the way out there</h2></div><p>Useful trip tools with a focus on reliable tracking, safety, and putting you in control.</p></div><div class="feature-grid">
+      <article class="feature-card"><div class="feature-symbol" aria-hidden="true">⌖</div><h3>Background tracking</h3><p>Location tracking designed for trips, with battery life in mind.</p></article>
+      <article class="feature-card"><div class="feature-symbol" aria-hidden="true">◒</div><h3>Battery-aware updates</h3><p>Updates are mindful of battery use and help avoid unnecessary activity.</p></article>
+      <article class="feature-card"><div class="feature-symbol" aria-hidden="true">↗</div><h3>Automatic trip logs</h3><p>Keep a record of trips with timestamps and movement data.</p></article>
+      <article class="feature-card"><div class="feature-symbol" aria-hidden="true">!</div><h3>SOS &amp; safety support</h3><p>Safety-focused notification support when it matters.</p></article>
+      <article class="feature-card"><div class="feature-symbol" aria-hidden="true">☁</div><h3>Secure cloud storage</h3><p>Cloud storage with automatic data cleanup.</p></article>
+      <article class="feature-card"><div class="feature-symbol" aria-hidden="true">⌑</div><h3>Privacy-first control</h3><p>A privacy-first design that keeps you in control of your data.</p></article>
+    </div></section>
+    <section class="audience" aria-labelledby="audience-heading"><div><p class="section-kicker">Made for getting out there</p><h2>Go explore. Keep peace of mind.</h2></div><p>For hikers, travellers, solo adventurers, and anyone who wants a reliable, low-overhead way to keep track of journeys.</p></section>
+    <section class="closing" aria-labelledby="closing-heading"><p class="section-kicker">Take Trek-Trkr along</p><h2 id="closing-heading">Track the journey, not the screen.</h2><p>Download Trek-Trkr and bring a thoughtful tracking companion on your next trip.</p><div class="actions"><a class="button button-primary" href="https://apps.apple.com/app/6736860620">Download on the App Store <span aria-hidden="true">↗</span></a></div><p style="margin-top:23px">Share Trek-Trkr with friends</p><div class="share"><a href="https://www.facebook.com/sharer/sharer.php?u=https://apps.apple.com/app/6736860620" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://twitter.com/intent/tweet?text=Check%20out%20Trek-Trkr%20%E2%80%93%20smart%20trip%20tracking!&url=https://apps.apple.com/app/6736860620" target="_blank" rel="noopener noreferrer">X</a></div></section>
+  </main>
+  <footer><div class="shell footer-inner"><p>© 2026 Gubbins App Development. All rights reserved.</p><p class="footer-links"><a href="mailto:gubbins.app.dev@icloud.com">Contact the developer</a>&nbsp;·&nbsp;<a href="https://gubbins-app-dev.github.io/trek-trkr/privacy">Privacy policy</a></p></div></footer>
 </body>
 </html>
